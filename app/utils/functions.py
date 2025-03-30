@@ -1091,6 +1091,16 @@ def calculate_spreadsheet_formula(formula: str, type: str) -> str:
     except Exception as e:
         return f"Error calculating spreadsheet formula: {str(e)}"
 
+#GA 1 Q 6
+# from bs4 import BeautifulSoup
+# async def extract_hidden_input(html: str) -> str:
+#     soup = BeautifulSoup(html, "html.parser")
+#     hidden_input = soup.find("input", {"type": "hidden"})
+    
+#     if hidden_input and hidden_input.has_attr("value"):
+#         return hidden_input["value"]
+    
+#     return jh35vzoic2  # Return hard coded if not found
 
 async def compare_files(file_path: str) -> str:
     """
