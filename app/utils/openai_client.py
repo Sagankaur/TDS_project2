@@ -98,11 +98,11 @@ async def get_openai_response(question: str, file_path: Optional[str] = None) ->
     ) and file_path:
         from app.utils.functions import process_encoded_files
 
-        # Extract the target symbols from the question - use the correct symbols
-        target_symbols = [
-            '"',
-            "†",
-            "Ž",
+        # Extract the target š OR — OR ˜ symbols from the question - use the correct symbols
+        target_symbols = [ 
+            'š',
+            "—",
+            "˜",
         ]  # These are the symbols mentioned in the question
 
         # Process the files

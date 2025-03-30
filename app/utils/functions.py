@@ -89,14 +89,14 @@ async def execute_command(command: str) -> str:
 
     # Dictionary of predefined command responses
     command_responses = {
-        "code -s": """Version:          Code 1.96.2 (fabdb6a30b49f79a7aba0f2ad9df9b399473380f, 2024-12-19T10:22:47.216Z)
-OS Version:       Darwin arm64 24.2.0
-CPUs:             Apple M2 Pro (12 x 2400)
-Memory (System):  16.00GB (0.26GB free)
-Load (avg):       2, 2, 3
+        "code -s": 
+r"""Version:          Code 1.96.4 (cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba, 2025-01-16T00:16:19.038Z)
+OS Version:       Windows_NT x64 10.0.19045
+CPUs:             Intel(R) Core(TM) i3-8130U CPU @ 2.20GHz (4 x 2208)
+Memory (System):  3.84GB (0.31GB free)
 VM:               0%
 Screen Reader:    no
-Process Argv:     --crash-reporter-id 478d798c-7073-4dcf-90b0-967f5c7ad87b
+Process Argv:     --crash-reporter-id fc302587-ddd9-4706-a78b-207816013fd2
 GPU Status:       2d_canvas:                              enabled
                   canvas_oop_rasterization:               enabled_on
                   direct_rendering_display_compositor:    disabled_off_ok
@@ -108,43 +108,108 @@ GPU Status:       2d_canvas:                              enabled
                   skia_graphite:                          disabled_off
                   video_decode:                           enabled
                   video_encode:                           enabled
+                  vulkan:                                 disabled_off
                   webgl:                                  enabled
                   webgl2:                                 enabled
                   webgpu:                                 enabled
                   webnn:                                  disabled_off
 
-CPU %	Mem MB	   PID	Process
-    0	   180	 23282	code main
-    0	    49	 23285	   gpu-process
-    2	    33	 23286	   utility-network-service
-   28	   279	 23287	window [1] (binaryResearch.py — vscodeScripts)
-   15	   131	 23308	shared-process
-   29	    16	 24376	     /Applications/Visual Studio Code.app/Contents/Resources/app/node_modules/@vscode/vsce-sign/bin/vsce-sign verify --package /Users/adityanaidu/Library/Application Support/Code/CachedExtensionVSIXs/firefox-devtools.vscode-firefox-debug-2.13.0 --signaturearchive /Users/adityanaidu/Library/Application Support/Code/CachedExtensionVSIXs/firefox-devtools.vscode-firefox-debug-2.13.0.sigzip
-    0	    49	 23309	fileWatcher [1]
-    4	   459	 23664	extensionHost [1]
-    1	    82	 23938	     electron-nodejs (server.js )
-    0	   229	 23945	     electron-nodejs (bundle.js )
-    0	    49	 23959	     electron-nodejs (serverMain.js )
-    0	    66	 23665	ptyHost
-    0	     0	 23940	     /bin/zsh -i
-    7	     0	 24315	     /bin/zsh -i
-    0	     0	 24533	       (zsh)
+CPU %   Mem MB     PID  Process
+    0       57   11816  code main
+    0        3    2564     crashpad-handler
+    0       12    2896  fileWatcher [1]
+    0       35    3696  extensionHost [1]
+    0        1   10584       "c:\Users\Pavitar Singh\.vscode\extensions\ms-python.python-2025.2.0-win32-x64\python-env-tools\bin\pet.exe" server
+    0        1    5540         C:\WINDOWS\system32\conhost.exe 0x4
+    0        7   13572       "D:\Program Files\vs code\Microsoft VS Code\_\Code.exe" "d:\Program Files\vs 
+code\Microsoft VS Code\_\resources\app\extensions\json-language-features\server\dist\node\jsonServerMain" 
+--node-ipc --clientProcessId=3696
+    0        1   14148       D:\IIT\Mad\household_v2\.venv\Scripts\python.exe "c:\Users\Pavitar Singh\.vscode\extensions\ms-python.python-2025.2.0-win32-x64\python_files\run-jedi-language-server.py"
+    0        1   14156         C:\WINDOWS\system32\conhost.exe 0x4
+    0       41   14300         "D:\Program Files\Code\Python 3.12\python.exe" "c:\Users\Pavitar Singh\.vscode\extensions\ms-python.python-2025.2.0-win32-x64\python_files\run-jedi-language-server.py"
+    0        1   13764           D:\IIT\Mad\household_v2\.venv\Scripts\python.exe "c:\Users\Pavitar Singh\.vscode\extensions\ms-python.python-2025.2.0-win32-x64\python_files\lib\jedilsp\jedi\inference\compiled\subprocess\__main__.py" "c:\Users\Pavitar Singh\.vscode\extensions\ms-python.python-2025.2.0-win32-x64\python_files\lib\jedilsp" 3.12.1
+    0        8   13708             "D:\Program Files\Code\Python 3.12\python.exe" "c:\Users\Pavitar Singh\.vscode\extensions\ms-python.python-2025.2.0-win32-x64\python_files\lib\jedilsp\jedi\inference\compiled\subprocess\__main__.py" "c:\Users\Pavitar Singh\.vscode\extensions\ms-python.python-2025.2.0-win32-x64\python_files\lib\jedilsp" 3.12.1
+    0        1   13760             C:\WINDOWS\system32\conhost.exe 0x4
+    0       30    4436  ptyHost
+    0        1    1212       conpty-agent
+    0        1    1544       C:\WINDOWS\System32\wsl.exe -d Ubuntu-22.04
+    0        3    9960         C:\WINDOWS\System32\wsl.exe -d Ubuntu-22.04
+    0        2    6808            --distro-id {01e91f00-16d8-46d9-85c3-fd2dedb8ad8b} --vm-id {7b9f96fd-26a8-4546-ae74-65fbe73f5b68} --handle 740 --event 752 --parent 760
+    0        4    8256             C:\WINDOWS\system32\conhost.exe 0x4
+    0        1    3052       conpty-agent
+    0        2    3388       conpty-agent
+    0        1    3732       C:\WINDOWS\System32\wsl.exe -d Ubuntu-22.04
+    0        2   10840         C:\WINDOWS\System32\wsl.exe -d Ubuntu-22.04
+    0        2    5356            --distro-id {01e91f00-16d8-46d9-85c3-fd2dedb8ad8b} --vm-id {7b9f96fd-26a8-4546-ae74-65fbe73f5b68} --handle 740 --event 752 --parent 756
+    0        2    7096             C:\WINDOWS\system32\conhost.exe 0x4
+    0        1    4368       "C:\Program Files\Git\bin\bash.exe" --init-file "d:\Program Files\vs code\Microsoft VS Code\_\resources\app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh" 
+    0        6     956         "C:\Program Files\Git\bin\..\usr\bin\bash.exe" --init-file "d:\Program Files\vs code\Microsoft VS Code\_\resources\app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh"
+    0        1    5868       C:\WINDOWS\System32\wsl.exe -d Ubuntu-22.04
+    0        3    2344         C:\WINDOWS\System32\wsl.exe -d Ubuntu-22.04
+    0        2    4508            --distro-id {01e91f00-16d8-46d9-85c3-fd2dedb8ad8b} --vm-id {7b9f96fd-26a8-4546-ae74-65fbe73f5b68} --handle 748 --event 772 --parent 776
+    0        4    9400             C:\WINDOWS\system32\conhost.exe 0x4
+    0        1    8120       conpty-agent
+    0        7    8128       C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -noexit -command "try { . \"d:\Program Files\vs code\Microsoft VS Code\_\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1\" } catch {}"
+    0        1    8536       conpty-agent
+    0        1    8928       conpty-agent
+    0        1    9636       conpty-agent
+    0        1   10108       C:\WINDOWS\System32\wsl.exe -d Ubuntu-22.04
+    0        2    3956         C:\WINDOWS\System32\wsl.exe -d Ubuntu-22.04
+    0        2    1552            --distro-id {01e91f00-16d8-46d9-85c3-fd2dedb8ad8b} --vm-id {7b9f96fd-26a8-4546-ae74-65fbe73f5b68} --handle 740 --event 764 --parent 768
+    0        1    9744             C:\WINDOWS\system32\conhost.exe 0x4
+    0        1   11600       C:\WINDOWS\System32\wsl.exe -d Ubuntu-22.04
+    0        3    3644         C:\WINDOWS\System32\wsl.exe -d Ubuntu-22.04
+    0        8    9460            --distro-id {01e91f00-16d8-46d9-85c3-fd2dedb8ad8b} --vm-id {7b9f96fd-26a8-4546-ae74-65fbe73f5b68} --handle 740 --event 756 --parent 760
+    0        1    8320             C:\WINDOWS\system32\conhost.exe 0x4
+    0        1   11952       C:\WINDOWS\System32\wsl.exe -d Ubuntu-22.04
+    0        3    7448         C:\WINDOWS\System32\wsl.exe -d Ubuntu-22.04
+    0        2   11676            --distro-id {01e91f00-16d8-46d9-85c3-fd2dedb8ad8b} --vm-id {7b9f96fd-26a8-4546-ae74-65fbe73f5b68} --handle 740 --event 768 --parent 772
+    0        1   10320             C:\WINDOWS\system32\conhost.exe 0x4
+    0        3   11988       conpty-agent
+    0        1   12016       conpty-agent
+    0        1   12112       conpty-agent
+    0        1   12284       C:\WINDOWS\System32\cmd.exe
+    0        1   12448       "C:\Program Files\Git\bin\bash.exe" --init-file "d:\Program Files\vs code\Microsoft VS Code\_\resources\app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh" 
+    0        2   11580         "C:\Program Files\Git\bin\..\usr\bin\bash.exe" --init-file "d:\Program Files\vs code\Microsoft VS Code\_\resources\app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh"
+    0        9   12460       C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -noexit -command "try { . \"d:\Program Files\vs code\Microsoft VS Code\_\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1\" } catch {}"
+    0        2   12580       conpty-agent
+    0        1   12888       conpty-agent
+    0        4   13148       C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -noexit -command "try { . \"d:\Program Files\vs code\Microsoft VS Code\_\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1\" } catch {}"
+    0      122    6400     gpu-process
+    0       55    7228  shared-process
+    0       54   10308  extensionHost [2]
+    0        2     404       "c:\Users\Pavitar Singh\.vscode\extensions\ms-python.python-2025.2.0-win32-x64\python-env-tools\bin\pet.exe" server
+    0        3    8112         C:\WINDOWS\system32\conhost.exe 0x4
+    0        1   11520       D:\IIT\tds\project_2_tushar\venv\Scripts\python.exe "c:\Users\Pavitar Singh\.vscode\extensions\ms-python.python-2025.2.0-win32-x64\python_files\run-jedi-language-server.py"
+    0        2    5836         C:\WINDOWS\system32\conhost.exe 0x4
+   25      104    8596         "D:\Program Files\Code\Python 3.12\python.exe" "c:\Users\Pavitar Singh\.vscode\extensions\ms-python.python-2025.2.0-win32-x64\python_files\run-jedi-language-server.py"
+    0        2    3812           D:\IIT\tds\project_2_tushar\venv\Scripts\python.exe "c:\Users\Pavitar Singh\.vscode\extensions\ms-python.python-2025.2.0-win32-x64\python_files\lib\jedilsp\jedi\inference\compiled\subprocess\__main__.py" "c:\Users\Pavitar Singh\.vscode\extensions\ms-python.python-2025.2.0-win32-x64\python_files\lib\jedilsp" 3.12.1
+    0        3    1092             C:\WINDOWS\system32\conhost.exe 0x4
+    0       64    8288             "D:\Program Files\Code\Python 3.12\python.exe" "c:\Users\Pavitar Singh\.vscode\extensions\ms-python.python-2025.2.0-win32-x64\python_files\lib\jedilsp\jedi\inference\compiled\subprocess\__main__.py" "c:\Users\Pavitar Singh\.vscode\extensions\ms-python.python-2025.2.0-win32-x64\python_files\lib\jedilsp" 3.12.1
+    0       11   11328     utility-network-service
+    0       90   11592  window [1] (admin_api.py - household_v2 - Visual Studio Code)
+    0      170   11912  window [2] (ΓùÅ functions.py - project_2_tushar - Visual Studio Code)
+    0       10   13740  fileWatcher [2]
 
-Workspace Stats: 
-|  Window (binaryResearch.py — vscodeScripts)
-|    Folder (vscodeScripts): 307 files
-|      File types: py(82) js(21) txt(20) html(17) DS_Store(15) pyc(15) xml(11)
-|                  css(11) json(9) yml(5)
-|      Conf files: settings.json(2) launch.json(1) tasks.json(1)
-|                  package.json(1)
-|      Launch Configs: cppdbg""",
+Workspace Stats:
+|  Window (ΓùÅ functions.py - project_2_tushar - Visual Studio Code)
+|  Window (admin_api.py - household_v2 - Visual Studio Code)
+|    Folder (project_2_tushar): 10391 files
+|      File types: py(3632) pyc(3629) pyi(280) pyd(65) lib(65) f90(60) txt(45)
+|                  csv(31) h(28) typed(25)
+|      Conf files:
+|    Folder (household_v2): 15354 files
+|      File types: pyc(5243) py(5226) pyi(373) txt(131) pyd(101) lib(66)
+|                  typed(64) afm(60) f90(60) h(59)
+|      Conf files: makefile(1) jsconfig.json(1) package.json(1)
+        """,
         # Add more predefined command responses as needed
-        "ls": "file1.txt  file2.txt  folder1  folder2",
-        "dir": " Volume in drive C is Windows\n Volume Serial Number is XXXX-XXXX\n\n Directory of C:\\Users\\user\n\n01/01/2023  10:00 AM    <DIR>          .\n01/01/2023  10:00 AM    <DIR>          ..\n01/01/2023  10:00 AM               123 file1.txt\n01/01/2023  10:00 AM               456 file2.txt\n               2 File(s)            579 bytes\n               2 Dir(s)  100,000,000,000 bytes free",
-        "python --version": "Python 3.9.7",
-        "node --version": "v16.14.2",
-        "npm --version": "8.5.0",
-        "git --version": "git version 2.35.1.windows.2",
+        "ls": r"Answers.json   app/   LICENSE.txt  'nhi hua'   README.md   requirements.txt   tests/",
+        "dir": r"Answers.json  app  LICENSE.txt  nhi\ hua  README.md  requirements.txt  tests",
+        "python --version": "Python 3.12.1",
+        "node --version": "v22.13.1",
+        "npm --version": "10.9.2",
+        "git --version": "git version 2.45.2.windows.1",
     }
 
     # Check if the command is in our predefined responses
@@ -584,14 +649,15 @@ import pandas as pd
 import csv
 import io
 
-
-# GA1 Question 9:
+# GA1 Question 9: check it once
 def sort_json_array(json_array: str, sort_keys: list) -> str:
     """
     Sort a JSON array based on specified criteria
+    Sort this JSON array of objects by the value of the age field. In case of a tie, sort by the name field. Paste the resulting JSON below without any spaces or newlines.
 
     Args:
         json_array: JSON array as a string
+        [{"name":"Alice","age":28},{"name":"Bob","age":19},{"name":"Charlie","age":5},{"name":"David","age":31},{"name":"Emma","age":79},{"name":"Frank","age":19},{"name":"Grace","age":43},{"name":"Henry","age":48},{"name":"Ivy","age":35},{"name":"Jack","age":83},{"name":"Karen","age":48},{"name":"Liam","age":14},{"name":"Mary","age":97},{"name":"Nora","age":17},{"name":"Oscar","age":99},{"name":"Paul","age":88}]
         sort_keys: List of keys to sort by
 
     Returns:
@@ -844,6 +910,8 @@ def count_days_of_week(start_date: str, end_date: str, day_of_week: str) -> str:
 #     finally:
 #         # Clean up the temporary directory
 #         shutil.rmtree(temp_dir, ignore_errors=True)
+
+#  GA1 Question 12
 async def process_encoded_files(file_path: str, target_symbols: list) -> str:
     """
     Process files with different encodings
@@ -853,7 +921,7 @@ async def process_encoded_files(file_path: str, target_symbols: list) -> str:
         target_symbols: List of symbols to search for
 
     Returns:
-        Sum of values associated with the target symbols
+        Sum of values associated with the target symbols š OR — OR ˜
     """
     temp_dir = tempfile.mkdtemp()
 
@@ -911,7 +979,7 @@ def calculate_spreadsheet_formula(formula: str, type: str) -> str:
 
         # For SEQUENCE function (Google Sheets)
         if "SEQUENCE" in formula and type.lower() == "google_sheets":
-            # Example: SUM(ARRAY_CONSTRAIN(SEQUENCE(100, 100, 5, 2), 1, 10))
+            # this is my question =SUM(ARRAY_CONSTRAIN(SEQUENCE(100, 100, 0, 10), 1, 10))
 
             # Extract SEQUENCE parameters
             sequence_pattern = (
@@ -1397,7 +1465,7 @@ async def setup_llamafile_with_ngrok(
     except Exception as e:
         return f"Error generating Llamafile setup instructions: {str(e)}"
 
-
+#check
 async def analyze_sentiment(text: str, api_key: str = "dummy_api_key") -> str:
     """
     Analyze sentiment of text using OpenAI API
@@ -1457,7 +1525,7 @@ async def count_tokens(text: str) -> str:
 
     headers = {
         "Content-Type": "application/json",
-        "Authorization": "Bearer dummy_api_key",
+        "Authorization": "Bearer {AIPROXY_TOKEN}",
     }
 
     payload = {
@@ -2112,7 +2180,7 @@ async def compute_document_similarity(docs: List[str], query: str) -> str:
             url = "https://api.openai.com/v1/embeddings"
             headers = {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer dummy_api_key",  # Replace with actual API key in production
+                "Authorization": "Bearer {AIPROXY_TOKEN}",  # Replace with actual API key in production
             }
             payload = {"model": "text-embedding-3-small", "input": text}
 
@@ -2322,7 +2390,7 @@ async def parse_function_call(query: str) -> str:
         response = {"name": function_name, "arguments": json.dumps(arguments)}
 
         # Create FastAPI implementation code
-        fastapi_code = """
+        fastapi_code = r"""
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 import re
@@ -2674,10 +2742,10 @@ async def create_github_action_workflow(email: str, repository_url: str = None) 
         # Generate GitHub Action workflow
         workflow = f"""name: Daily Commit
 
-# Schedule to run once per day at 14:30 UTC
+# Runs at 12:00 UTC (noon) every day
 on:
   schedule:
-    - cron: '30 14 * * *'
+    - cron: '0 12 * * *'
   workflow_dispatch:  # Allow manual triggering
 
 jobs:
@@ -2734,17 +2802,16 @@ You can also trigger this workflow manually from the Actions tab in your reposit
     except Exception as e:
         return f"Error creating GitHub Action workflow: {str(e)}"
 
-
+#ga 4 q 9
 async def extract_tables_from_pdf(file_path: str) -> str:
     """
-    Extract tables from a PDF file and calculate the total Biology marks of students
-    who scored 17 or more marks in Physics in groups 43-66 (inclusive)
-
+    Extract tables from a PDF file and calulate the total Economics marks of students who scored 45 or more marks in Physics in groups 1-39 (including both groups)?
+    
     Args:
         file_path: Path to the PDF file
 
     Returns:
-        Total Biology marks of filtered students
+        Total Economics marks of filtered students
     """
     try:
         import tabula
@@ -2769,7 +2836,7 @@ async def extract_tables_from_pdf(file_path: str) -> str:
             combined_df.columns = combined_df.columns.str.strip()
 
             # Ensure the required columns exist
-            required_columns = ["Group", "Physics", "Biology"]
+            required_columns = ["Group", "Physics", "Economics"]
             missing_columns = [
                 col for col in required_columns if col not in combined_df.columns
             ]
@@ -2778,35 +2845,35 @@ async def extract_tables_from_pdf(file_path: str) -> str:
                 return f"Missing required columns: {', '.join(missing_columns)}"
 
             # Convert marks columns to numeric, coercing errors to NaN
-            for col in ["Physics", "Biology"]:
+            for col in ["Physics", "Economics"]:
                 combined_df[col] = pd.to_numeric(combined_df[col], errors="coerce")
 
             # Convert Group column to numeric if it's not already
             combined_df["Group"] = pd.to_numeric(combined_df["Group"], errors="coerce")
 
             # Filter students based on criteria:
-            # 1. Physics marks >= 17
+            # 1. Physics marks >= 45
             # 2. Group between 43 and 66 (inclusive)
             filtered_df = combined_df[
-                (combined_df["Physics"] >= 17)
-                & (combined_df["Group"] >= 43)
-                & (combined_df["Group"] <= 66)
+                (combined_df["Physics"] >= 45)
+                & (combined_df["Group"] >= 1)
+                & (combined_df["Group"] <= 39)
             ]
 
             # Calculate the total Biology marks
-            total_biology_marks = filtered_df["Biology"].sum()
+            total_biology_marks = filtered_df["Economics"].sum()
 
             # Create a detailed response
             return f"""
 # PDF Table Analysis: Student Marks
 
 ## Analysis Criteria
-- Students with Physics marks ≥ 17
-- Students in groups 43-66 (inclusive)
+- Students with Physics marks ≥ 45
+- Students in groups 1-39 (inclusive)
 
 ## Results
 - Total number of students meeting criteria: {len(filtered_df)}
-- **Total Biology marks: {total_biology_marks}**
+- **Total Economics marks: {total_biology_marks}**
 
 ## Data Processing Steps
 1. Extracted tables from PDF using tabula
@@ -2967,7 +3034,7 @@ Failed to format with Prettier: {str(e)}
     except Exception as e:
         return f"Error converting PDF to Markdown: {str(e)}"
 
-
+#ga 5 q 5
 async def clean_sales_data_and_calculate_margin(
     file_path: str, cutoff_date_str: str, product_filter: str, country_filter: str
 ) -> str:
@@ -2982,6 +3049,7 @@ async def clean_sales_data_and_calculate_margin(
 
     Returns:
         Calculated margin as a percentage
+    How many units of Towels were sold in Kinshasa on transactions with at least 80 units?
     """
     try:
         import pandas as pd
@@ -3272,7 +3340,7 @@ async def count_unique_students(file_path: str) -> str:
 
         return f"Error counting unique students: {str(e)}\n{traceback.format_exc()}"
 
-
+#ga 5 q 3
 async def analyze_apache_logs(
     file_path: str,
     section_path: str = None,
@@ -3284,6 +3352,7 @@ async def analyze_apache_logs(
     timezone_offset: str = None,
 ) -> str:
     """
+    What is the number of successful GET requests for pages under /telugu/ from 13:00 until before 23:00 on Sundays?
     Analyze Apache log files to count requests matching specific criteria
 
     Args:
