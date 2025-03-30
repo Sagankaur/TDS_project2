@@ -19,6 +19,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+#just for vercel
 @app.get("/")
 def home():
     return {"message": "API is working!"}
