@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 venv/
 __pycache__/
 *.py[cod]
@@ -8,3 +9,38 @@ __pycache__/
 htmlcov/
 .DS_Store
 .vercel
+=======
+# Virtual environment
+venv/
+
+# Uploads directory
+uploads/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# VS Code settings
+.vscode/
+
+# Ignore environment files (optional)
+.env
+*.env
+
+# Ignore logs and temp files (optional)
+*.log
+*.tmp
+venv/
+__pycache__/
+*.py[cod]
+*.class
+.env
+.pytest_cache/
+.coverage
+htmlcov/
+.DS_Store
+.vercel
+
+>>>>>>> project2_tds/main
