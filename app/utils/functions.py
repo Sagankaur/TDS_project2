@@ -1475,7 +1475,61 @@ async def setup_llamafile_with_ngrok(
     except Exception as e:
         return f"Error generating Llamafile setup instructions: {str(e)}"
 
-#check
+#check GA 3 q 1
+from dotenv import load_dotenv
+load_dotenv()
+api_key = os.getenv("OPENAI_API_KEY")
+
+# BASE_URL = "https://aiproxy.sanand.workers.dev/openai/v1"
+# def GA3_1(question: str):
+#     match = re.search(r"meaningless text:\s*(.*?)\s*Write a",
+#                       question, re.DOTALL)
+
+#     if not match:
+#         return "Error: No match found in the input string."
+
+#     meaningless_text = match.group(1).strip()
+
+#     python_code = f"""
+# import httpx
+# model = "gpt-4o-mini"
+# messages = [
+#     {{"role": "system", "content": "LLM Analyze the sentiment of the text. Make sure you mention GOOD, BAD, or NEUTRAL as the categories."}}, 
+#     {{"role": "user", "content": "{meaningless_text}"}}
+# ]
+# data = {{"model": model,"messages": messages}}
+# headers = {{"Content-Type": "application/json","Authorization": "Bearer dummy_api_key"}}
+# response = httpx.post("https://api.openai.com/v1/chat/completions", json=data, headers=headers)
+# print(response.json())"""
+#     return python_code
+
+# question="""
+# DataSentinel Inc. is a tech company specializing in building advanced natural language processing (NLP) solutions. Their latest project involves integrating an AI-powered sentiment analysis module into an internal monitoring dashboard. The goal is to automatically classify large volumes of unstructured feedback and text data from various sources as either GOOD, BAD, or NEUTRAL. As part of the quality assurance process, the development team needs to test the integration with a series of sample inputs—even ones that may not represent coherent text—to ensure that the system routes and processes the data correctly.
+
+# Before rolling out the live system, the team creates a test harness using Python. The harness employs the httpx library to send POST requests to OpenAI's API. For this proof-of-concept, the team uses the dummy model gpt-4o-mini along with a dummy API key in the Authorization header to simulate real API calls.
+
+# One of the test cases involves sending a sample piece of meaningless text:
+
+# d4A aWl1FbqmD9 j SEIWdsMNo Jw e8cRbq  v  WCu WQL K
+# Write a Python program that uses httpx to send a POST request to OpenAI's API to analyze the sentiment of this (meaningless) text into GOOD, BAD or NEUTRAL. Specifically:
+
+# Make sure you pass an Authorization header with dummy API key.
+# Use gpt-4o-mini as the model.
+# The first message must be a system message asking the LLM to analyze the sentiment of the text. Make sure you mention GOOD, BAD, or NEUTRAL as the categories.
+# The second message must be exactly the text contained above.
+# This test is crucial for DataSentinel Inc. as it validates both the API integration and the correctness of message formatting in a controlled environment. Once verified, the same mechanism will be used to process genuine customer feedback, ensuring that the sentiment analysis module reliably categorizes data as GOOD, BAD, or NEUTRAL. This reliability is essential for maintaining high operational standards and swift response times in real-world applications.
+
+# Note: This uses a dummy httpx library, not the real one. You can only use:
+
+# response = httpx.get(url, **kwargs)
+# response = httpx.post(url, json=None, **kwargs)
+# response.raise_for_status()
+# response.json()
+# Code
+# """
+# print(GA3_1(question))
+
+
 async def analyze_sentiment(text: str, api_key: str = "dummy_api_key") -> str:
     """
     Analyze sentiment of text using OpenAI API
@@ -1911,6 +1965,7 @@ async def get_weather_forecast(city: str) -> str:
             "api_key": "AGbFAKx58hyjQScCXIYrxuEwJh2W2cmv",  # This is a public API key used by BBC
             "stack": "aws",
             "locale": "en-GB",
+            
             "filter": "international",
             "place-types": "settlement,airport,district",
             "order": "importance",
@@ -3364,7 +3419,7 @@ async def analyze_apache_logs(
     """
     What is the number of successful GET requests for pages under /telugu/ from 13:00 until before 23:00 on Sundays?
     Analyze Apache log files to count requests matching specific criteria
-
+    Across all requests under tamil/ on 2024-05-31, how many bytes did the top IP address (by volume of downloads) download?
     Args:
         file_path: Path to the Apache log file (can be gzipped)
         section_path: Path section to filter (e.g., '/telugump3/')
