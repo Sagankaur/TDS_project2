@@ -1408,7 +1408,7 @@ async def create_docker_image(
     """
     try:
         # Default Dockerfile if none provided
-        if not dockerfile_content:
+        if not dockerfile_content:   
             dockerfile_content = """FROM python:3.9-slim
 WORKDIR /app
 COPY . .
